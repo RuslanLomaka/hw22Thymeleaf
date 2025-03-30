@@ -12,8 +12,6 @@ public class ThymeleafServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
-
-
         try {
             response.getWriter().write("Hello Ruslan!");
         } catch (Exception e) {
