@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Time Display</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Поточний час</h1>
+<p>Часовий пояс: <b th:text="${zone}">Europe/Kiev</b></p>
+<p>Час: <b th:text="${localTime}"></b></p>
+<br>
+
+<div style="margin-top: 30px; border-top: 1px solid #ccc; padding-top: 20px;">
+    <h2>Про демонстрацію</h2>
+    <p>Цей приклад показує, як Java-сервлет обчислює поточний час у заданому часовому поясі та відображає його через
+        шаблонізатор <a href="https://www.thymeleaf.org/" target="_blank">Thymeleaf</a>.</p>
+
+    <p><strong>Як протестувати:</strong></p>
+    <ul>
+        <li>Додайте параметр <code>?zone=Europe/Kyiv</code> до URL:</li>
+        <li><a href="/hw22Thymeleaf_war/time?zone=Europe/Kyiv">Переглянути час у Києві</a></li>
+        <li><a href="/hw22Thymeleaf_war/time?zone=Asia/Tokyo">Час у Токіо</a></li>
+        <li><a href="/hw22Thymeleaf_war/time?zone=America/New_York">Час у Нью-Йорку</a></li>
+        <li><a href="/hw22Thymeleaf_war/time">Використати часовий пояс із cookie або UTC за замовчуванням</a></li>
+    </ul>
+
+    <p>Після першого запиту часовий пояс зберігається у cookie на 30 днів.</p>
+</div>
+</body>
+</html>
