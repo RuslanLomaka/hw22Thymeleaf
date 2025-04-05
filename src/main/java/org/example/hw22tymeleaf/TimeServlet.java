@@ -33,10 +33,6 @@ public class TimeServlet extends HttpServlet {
         engine.setTemplateResolver(resolver);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        doGet(req, resp);
-    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
